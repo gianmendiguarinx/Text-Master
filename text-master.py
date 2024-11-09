@@ -60,4 +60,5 @@ def main():
             print("Invalid option. Please try again.")
 
         print("\nChoose another option or enter 0 to exit:")
+    print("hello")
 main()
