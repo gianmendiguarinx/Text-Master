@@ -5,7 +5,6 @@ def character_count(text):
     return sum(1 for char in text if char != ' ')
 
 def sentence_count(text):
-    # Split by common sentence-ending punctuation and filter out empty strings
     sentences = text.replace('!', '.').replace('?', '.').split('.')
     return len([s for s in sentences if s.strip()])
 
