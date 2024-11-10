@@ -2,7 +2,7 @@ def word_count(text):
     return len(text.split())
 
 def character_count(text):
-    return sum(1 for char in text if char != ' ')
+    return len(text)
 
 def sentence_count(text):
     sentences = text.replace('!', '.').replace('?', '.').split('.')
@@ -13,16 +13,17 @@ def paragraph_count(text):
     return len([p for p in paragraphs if p.strip()])
 
 def main():
-    print("Welcome to the Text Master Tool!")
-    print("Choose an option:")
-    print("1. Word Count")
-    print("2. Character Count")
-    print("3. Sentence Count")
-    print("4. Paragraph Count")
-    print("5. All Counts")
-    print("0. Exit")
+    print("\nWelcome to the Text Master Tool!")
     
     while True:
+        print("\nChoose an option:")
+        print("1. Word Count")
+        print("2. Character Count")
+        print("3. Sentence Count")
+        print("4. Paragraph Count")
+        print("5. All Counts")
+        print("0. Exit")
+        
         try:
             option = int(input("Enter your choice: "))
         except ValueError:
@@ -30,7 +31,7 @@ def main():
             continue
 
         if option == 0:
-            print("Thank you for using the Text Master CLI Tool!")
+            print("Thank you for using the Text Master Tool!")
             break
         
         if option in [1, 2, 3, 4, 5]:
@@ -51,12 +52,11 @@ def main():
                     f"Sentence Count: {sentence_count(text)}\n"
                     f"Paragraph Count: {paragraph_count(text)}"
                 )
+            
             print("\n" + "-"*50)
             print(result)
             print("-"*50)
 
         else:
             print("Invalid option. Please try again.")
-
-        print("\nChoose another option or enter 0 to exit:")
 main()
