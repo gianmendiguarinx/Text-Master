@@ -14,7 +14,7 @@ def paragraph_count(text):
     return len([p for p in paragraphs if p.strip()])
 
 def main():
-    print("Welcome to the Text Master CLI Tool!")
+    print("Welcome to the Text Master Tool!")
     print("Choose an option:")
     print("1. Word Count")
     print("2. Character Count")
@@ -35,12 +35,12 @@ def main():
             break
         
         if option in [1, 2, 3, 4, 5]:
-            text = input("\nEnter your text (any characters or numbers are allowed):\n")
+            text = input("\nEnter your text:\n")
             
             if option == 1:
                 result = f"Word Count: {word_count(text)}"
             elif option == 2:
-                result = f"Character Count (excluding spaces): {character_count(text)}"
+                result = f"Character Count: {character_count(text)}"
             elif option == 3:
                 result = f"Sentence Count: {sentence_count(text)}"
             elif option == 4:
@@ -48,7 +48,7 @@ def main():
             elif option == 5:
                 result = (
                     f"Word Count: {word_count(text)}\n"
-                    f"Character Count (excluding spaces): {character_count(text)}\n"
+                    f"Character Count: {character_count(text)}\n"
                     f"Sentence Count: {sentence_count(text)}\n"
                     f"Paragraph Count: {paragraph_count(text)}"
                 )
